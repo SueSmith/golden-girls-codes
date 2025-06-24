@@ -6,6 +6,7 @@ description = "A project for learning about status codes."
 language = "javascript"
 manifest_version = 3
 name = "Golden Girls Codes"
+service_id = "SxtNACd4xbV2Z2dWK1koh0"
 
 [scripts]
   build = "npm run build"

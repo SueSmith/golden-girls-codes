@@ -23,7 +23,7 @@ var source = `<html lang="en">
       name="og:description"
       content="An app for learning about status codes!"
     />
-    <meta property="og:title" content="HTTP Keanu ({{{status}}} {{{name}}})" />
+    <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
     <meta property="og:image" content="{{{img}}}" />
 
     <title>HTTP Keanu ({{{status}}} {{{name}}})</title>
@@ -78,12 +78,12 @@ to this section's matching END comment to see page-specific styles.
   height: 2.75rem;
   align-items: center;
   cursor: pointer;
-  background: #ffffff;
+  background: cornsilk;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 4px;
   text-decoration: none;
-  color: #000;
+  color: darkgreen;
   white-space: nowrap;
   margin-left: auto;
 }
@@ -103,27 +103,25 @@ to this section's matching END comment to see page-specific styles.
   flex-wrap: wrap;
 }
 
-.footer a:not(.btn--remix):link,
-a:not(.btn--remix):visited {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.1rem;
-  color: #000;
-  text-decoration: none;
-  border-style: none;
-}
-.footer a:hover {
-  background: var(--color-primary);
-}
-
 /******************************************************************************
 END Glitch hello-app default styles
 ******************************************************************************/
+html {
+  background-image:url(https://goldengirlsstatus.edgecompute.app/ggbg.jpg);
+  background-repeat:repeat;
+}
 
+@media only screen and (max-width: 767px) {
+body {
+   margin: 0.5rem !important;
+}
+}
 body {
   font-family: var(--font-family);
-  background-color: var(--color-bg);
-  margin:0.1rem;
+  background: honeydew;
+  margin:2rem;
+  border: 5px solid salmon;
+  color: lightcoral;
 }
 
 /* Page structure */
@@ -138,14 +136,35 @@ body {
   justify-content: center;
 }
 
-/* Very light scaling for our illustration */
 h1 {
-  color: var(--color-title);
   margin: 0;
   padding-left: 0.5rem;
   padding-top: 0.5rem;
 }
+h1 a:link, h1 a:hover, h1 a:visited {
+  color: mediumorchid;
+}
+h1:after {
+  content: " 🌴";
+}
+h2 {
+  color: palevioletred;
+}
+h3 {
+  color: plum;
+}
 
+.footer a:hover {
+  background: seashell;
+}
+
+p a:link, div.extra a:link {
+  font-weight: bold;
+  color: hotpink;
+}
+p a:hover, p a:visited, div.extra a:hover, div.extra a:visited {
+  color: seagreen;
+}
 /* Button - Add it from the README instructions */
 button,
 input {
@@ -160,9 +179,7 @@ input {
 }
 
 /* Subheading */
-h2 {
-  color: var(--color-header);
-}
+
 h2,
 h3 {
   padding: 0;
@@ -178,9 +195,8 @@ h3 {
 .code, #joker {
   border: 3px solid white;
   margin: 0.5rem;
-  margin-right: 1rem;
   padding: 0.5rem;
-  background: #ffffff;
+  background: cornsilk;
   display:inline;
 }
 .codes {
@@ -189,8 +205,10 @@ h3 {
   margin: auto;
 }
 .code .imghold {
-  width: 20rem;
+  width:20rem;
+  max-width: 80vw;
   height: 15rem;
+  background-color:cornsilk;
 }
 
 .code img {
@@ -198,8 +216,12 @@ h3 {
   width:100%;
   object-fit:cover;
 }
+.imghold > .imghold img:hover {
+  border:1px solid black;
+}
+
 p.intro {
-  background:yellow;
+  background:aquamarine;
   padding:0.5rem 1rem 0.5rem 1rem;
 }
 p.random {
@@ -208,50 +230,76 @@ p.random {
   text-align:right;
 }
 p.random a:link, p.random a:hover, p.random a:visited {
-  background:white;
+  background:seashell;
   padding:0.3rem;
 }
 .highlight {
   border: 3px solid lime;
   margin: 0.2rem;
   padding: 0.5rem;
-
-  background: #ffffff;
+  background: cornsilk;
   display:inline;
 }
 .highlight img, #joker img {
-  width:90vw;
-  max-width:40rem;
+  width:40rem;
+  max-width:80vw;
 }
 h1 a:link, h1 a:hover, h1 a:visited {
   text-decoration:none;
-  color: var(--color-title);
 }
 #bonus {
   margin-left:1rem;
+  margin-right:1rem;
 }
 div [id^="code1"] {
-  border-color:blue;
+  border-color:lavenderblush;
 }
 div [id^="code2"] {
-  border-color:lime;
+  border-color:lightpink;
 }
 div [id^="code3"] {
-  border-color:yellow;
+  border-color:deeppink;
 }
 div [id^="code4"] {
-  border-color:orange;
+  border-color:darkviolet;
 }
 div [id^="code5"] {
-  border-color:red;
+  border-color:purple;
 }
+div [id^="code"]:nth-of-type(3n + 1) h2:after {
+  content: " 👜";
+}
+
+div [id^="code"]:nth-of-type(3n + 2) h2:after {
+  content: " 🍝";
+}
+
+div [id^="code"]:nth-of-type(3n + 3) h2:after {
+  content: " 💋";
+}
+div [id^="code"]:nth-of-type(3n + 1) h3:after {
+  content: " 🍰";
+}
+
+div [id^="code"]:nth-of-type(3n + 2) h3:after {
+  content: " 🪴";
+}
+
+div [id^="code"]:nth-of-type(3n + 3) h3:after {
+  content: " 🏖️";
+}
+
+.info {
+  max-width:600px;
+}
+
   </style>
 
   </head>
   <body>
     <div class="wrapper">
       <div class="content" role="main">
-        <h1><a href="/">HTTP Keanu</a></h1>
+        <h1><a href="/">HTTP Golden Girls</a></h1>
 
         <p class="intro">
           A fun way to learn about status codes, inspired by
@@ -273,7 +321,7 @@ div [id^="code5"] {
               </div>
 
               <div class="extra">
-                <p>{{info}}</p>
+                <p class="info">{{info}}</p>
                 {{#if joker}}
                   <a
                     href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/"
@@ -294,7 +342,7 @@ div [id^="code5"] {
                 <div class="imghold">
                   <a href="?code={{{code}}}"><img
                       src="{{pic}}"
-                      alt="{{alt}}" 
+                      alt="{{alt}}"
                     /></a>
                 </div>
               </div>
@@ -302,7 +350,7 @@ div [id^="code5"] {
           {{/if}}
         </div>
         <p id="bonus">
-          Bonus: try selecting an invalid code, like
+          Try selecting an invalid code for some bonus pics including celebrity guest stars, like
           <a href="?code=1000">1000</a>
         </p>
       </div>
@@ -310,7 +358,7 @@ div [id^="code5"] {
         <a
           class="btn--remix"
           target="_top"
-          href="https://github.com/SueSmith/keanu-codes"
+          href="https://github.com/SueSmith/golden-girls-codes"
         >
           🚧 Fork on GitHub
         </a>
@@ -327,7 +375,7 @@ router.get("/", async (req, res) => {
   if (req.query.get('code') == undefined) {
     params = codes;
     params.img =
-      "https://cdn.glitch.global/b8209f22-6edd-46cc-8707-e2d42e09b6e7/thankeanu.jpg?v=1702506252169";
+      "https://goldengirlsstatus.edgecompute.app/Screenshot_20240811_223228_Firefox.jpg";
     params.status = "";
   } else {
     params.selected = true;
@@ -349,12 +397,12 @@ router.get("/", async (req, res) => {
       params.joker = true;
       params.code = 0;
       params.name = "WELP";
-      params.pic =
-        "https://cdn.glitch.global/b8209f22-6edd-46cc-8707-e2d42e09b6e7/keanu.jpg?v=1702505475354";
-      params.info = "Whoops! This one isn't on the list.";
-      params.alt = "Keanu holding his hands up";
-      params.img = params.pic;
+      let bonus = codes.bonus[Math.floor(Math.random() * codes.bonus.length)];
+      params.pic = bonus.pic;
+      params.info = "This code isn't on the list!";
+      params.img = bonus.pic;
       params.status = 0;
+      params.alt = bonus.alt;
     }
   }
   let data = params;
