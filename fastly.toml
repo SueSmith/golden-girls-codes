@@ -1,0 +1,12 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://www.fastly.com/documentation/reference/compute/fastly-toml
+
+authors = ["<oss@fastly.com>"]
+description = "A project for learning about status codes."
+language = "javascript"
+manifest_version = 3
+name = "Golden Girls Codes"
+
+[scripts]
+  build = "npm run build"
+  post_init = "npm install"
