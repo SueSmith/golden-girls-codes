@@ -411,4 +411,23 @@ router.get("/", async (req, res) => {
   return res.html(result);
 });
 
+router.use((err, req, res) => {
+  let params = {};
+  params.selected = true;
+  params.joker = true;
+  params.code = 0;
+  params.name = "WELP";
+  params.pic =
+    "https://goldengirlsstatus.edgecompute.app/Screenshot_20240811_223228_Firefox.jpg";
+  params.info = "Whoops! This one isn't on the list.";
+  params.alt = "The girls";
+  params.img = params.pic;
+  params.status = 0;
+  console.error(err);
+  let data = params;
+  let result = template(data);
+
+  return res.html(result);
+});
+
 router.listen();
