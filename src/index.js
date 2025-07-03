@@ -398,6 +398,7 @@ router.get("/", async (req, res) => {
       params.code = 0;
       params.name = "WELP";
       let bonus = codes.bonus[Math.floor(Math.random() * codes.bonus.length)];
+      res.headers.set("Surrogate-Control", "max-age=0");
       params.pic = bonus.pic;
       params.info = "This code isn't on the list!";
       params.img = bonus.pic;
