@@ -26,7 +26,7 @@ var source = `<html lang="en">
     <meta property="og:title" content="HTTP Golden Girls ({{{status}}} {{{name}}})" />
     <meta property="og:image" content="{{{img}}}" />
 
-    <title>HTTP Keanu ({{{status}}} {{{name}}})</title>
+    <title>HTTP Golden Girls ({{{status}}} {{{name}}})</title>
 
     <style>
 /******************************************************************************
@@ -293,6 +293,15 @@ div [id^="code"]:nth-of-type(3n + 3) h3:after {
   max-width:600px;
 }
 
+.social img {
+  max-height:1.3rem;
+}
+.social {
+  width:100%;
+  text-align:right;
+  margin-right: 0.5rem;
+}
+
   </style>
 
   </head>
@@ -355,13 +364,11 @@ div [id^="code"]:nth-of-type(3n + 3) h3:after {
         </p>
       </div>
       <footer class="footer">
-        <a
-          class="btn--remix"
-          target="_top"
-          href="https://github.com/SueSmith/golden-girls-codes"
-        >
-          🚧 Fork on GitHub
-        </a>
+        <div class="social">
+          <a href="https://www.suesmith.dev"><img src="https://goldengirlsstatus.edgecompute.app/webpink.png"/></a>
+          <a href="https://glasgow.social/@sue"><img src="https://goldengirlsstatus.edgecompute.app/mastodonpink.png"/></a> 
+          <a href="https://bsky.app/profile/suesmith.Lol"><img src="https://goldengirlsstatus.edgecompute.app/bskyiconpink.png"/></a>
+        </div>
       </footer>
     </div>
 
